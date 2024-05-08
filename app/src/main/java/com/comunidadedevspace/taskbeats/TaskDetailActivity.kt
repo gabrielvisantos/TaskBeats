@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toolbar
 import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {
@@ -38,6 +39,10 @@ class TaskDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_task_detail)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+        
+
+
         //Recuperar task
         task = intent.getSerializableExtra(TASK_DETAIL_EXTRA) as Task?
 
@@ -58,9 +63,9 @@ class TaskDetailActivity : AppCompatActivity() {
             //se title não tiver nada e a descrição também, as informações não passam
             if (title.isNotEmpty() && desc.isNotEmpty()) {
                 if (task == null) {
-                    addOrUpdateTask(0,title, desc, ActionType.CREATE)
+                    addOrUpdateTask(0, title, desc, ActionType.CREATE)
                 } else {
-                    addOrUpdateTask(task!!.id,title, desc, ActionType.UPDATE)
+                    addOrUpdateTask(task!!.id, title, desc, ActionType.UPDATE)
                 }
 
             } else {

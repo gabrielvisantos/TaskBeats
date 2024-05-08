@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TaskListAdapter(
 
-    //a linha 13 foi adicionada na criação de um click, pedindo um novo construtor
+    //foi adicionada na criação de um click, pedindo um novo construtor
     //--> Unit quer dizer que a função não retorno nenhum, então preciso especificar isso
     private val openTaskDetailView: (task: Task) -> Unit
 ) : ListAdapter<Task, TaskListViewHolder>(TaskListAdapter){

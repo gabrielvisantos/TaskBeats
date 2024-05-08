@@ -5,47 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
     tools:context=".TaskDetailActivity">
 
+    <include layout="@layout/toolbar" />
+
     <TextView
-        android:textColor="@color/dark_green"
+        style="@style/Title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="Título:" />
 
     <EditText
         android:id="@+id/edt_task_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Digite sua nova tarefa"
         android:textColor="@color/cinza_claro"
-        android:hint="Digite sua nova tarefa"/>
+        android:textSize="14sp" />
 
     <TextView
-        android:textColor="@color/dark_green"
+        style="@style/Title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:text="Descrição:"/>
+        android:layout_marginStart="8dp"
+        android:text="Descrição:" />
 
     <EditText
         android:id="@+id/edt_task_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Digite uma descrição"
         android:textColor="@color/cinza_claro"
-        android:textSize="14dp"
-        android:hint="Digite uma descrição"/>
+        android:textSize="14dp" />
 
     <Button
         android:id="@+id/btn_done"
-        android:textColor="@color/black"
-        android:layout_marginTop="16dp"
+        style="@style/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CONCLUIR"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Concluir"
+        android:textColor="@color/black" />
 
 </LinearLayout>
