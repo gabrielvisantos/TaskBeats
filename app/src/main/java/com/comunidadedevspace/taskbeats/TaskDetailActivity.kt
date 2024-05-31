@@ -16,8 +16,6 @@ import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {
 
-    //para que a task fique dentro do escopo geral, sem ter que null
-    //desse modo já se inicializa logo que entra na tela
     private var task: Task? = null
     private lateinit var btnDone: Button
 
@@ -29,7 +27,6 @@ class TaskDetailActivity : AppCompatActivity() {
                 .apply {
                     putExtra(TASK_DETAIL_EXTRA, task)
                 }
-
             return intent
 
         }
@@ -38,9 +35,7 @@ class TaskDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_task_detail)
-
         setSupportActionBar(findViewById(R.id.toolbar))
-        
 
 
         //Recuperar task
@@ -104,7 +99,7 @@ class TaskDetailActivity : AppCompatActivity() {
                 if (task != null) {
                     returnAction(task!!, ActionType.DELETE)
                 } else {
-                    showMessage(btnDone, "Item não encontrado")
+                    showMessage(btnDone, "Preencha todos os campos")
                 }
                 true
 
