@@ -10,10 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TaskListAdapter(
 
-    //foi adicionada na criação de um click, pedindo um novo construtor
-    //--> Unit quer dizer que a função não retorno nenhum, então preciso especificar isso
     private val openTaskDetailView: (task: Task) -> Unit
-) : ListAdapter<Task, TaskListViewHolder>(TaskListAdapter){
+) : ListAdapter<Task, TaskListViewHolder>(TaskListAdapter) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskListViewHolder {
@@ -34,15 +32,15 @@ class TaskListAdapter(
             return oldItem == newItem
 
         }
+
         override fun areContentsTheSame(oldItem: Task, newItem: Task): Boolean {
-            return oldItem.title == newItem.title&&
+            return oldItem.title == newItem.title &&
                     oldItem.description == newItem.description
         }
 
     }
 }
 
-//O TaskViewHolder esta ligado com o item_task.xml
 class TaskListViewHolder(
     private val view: View
 ) : RecyclerView.ViewHolder(view) {

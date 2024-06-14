@@ -17,10 +17,10 @@ interface TaskDao {
     @Update(onConflict = OnConflictStrategy.REPLACE)
     fun update(task: Task)
 
-    @Query("DELETE from task")
+    @Query ("DELETE from task")
     fun deleteAll()
 
-    @Query("DELETE from task WHERE id =:id")
+    @Query ("DELETE from task WHERE id=:id")
     fun deleteById(id: Int)
 
 

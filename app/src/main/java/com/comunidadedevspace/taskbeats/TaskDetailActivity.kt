@@ -68,11 +68,6 @@ class TaskDetailActivity : AppCompatActivity() {
             }
         }
 
-        //Recuperar campo do xml
-        //tvTitle = findViewById(R.id.tv_task_title_detail)
-
-        //setar um novo texto na tela
-        //tvTitle.text = task?.title ?: "Adicione uma tarefa"
 
     }
 

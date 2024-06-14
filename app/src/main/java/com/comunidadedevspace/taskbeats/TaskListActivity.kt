@@ -48,9 +48,13 @@ class MainActivity : AppCompatActivity() {
 
 
             when (taskAction.actionType) {
+
                 ActionType.DELETE.name -> deleteById(task.id)
+
                 ActionType.CREATE.name -> insertIntoDatabase(task)
+
                 ActionType.UPDATE.name -> updateIntoDatabase(task)
+
             }
 
 
@@ -108,7 +112,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun listFromDatabase() {
         CoroutineScope(IO).launch {
             val myDatabaseList: List<Task> = dao.getAll()
@@ -151,6 +154,8 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 }
 
 enum class ActionType {
